@@ -4,8 +4,8 @@
 async function movies() {
     const movies = await fetch('https://www.omdbapi.com/?i=tt3896198&apikey=e5586477&s=movies')
     const moviesData = await movies.json();
-    moviesData
-        .map( 
+    
+    moviesData.Search.map( 
             (movie) => `<div class="movie__row">
     <div class="movie__container">
     <div class="movie__img">
