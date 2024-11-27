@@ -188,7 +188,7 @@ movies
  }
  
  .movie-card__container {
-     width: 600px;
+     width: 300px;
  }
  
  .movie--disappear {
@@ -200,6 +200,11 @@ movies
      margin: 24px 24px 0 24px;
      
  }
+
+ .movie__para {
+  width: 100%;
+  padding: 0 24px 0 24px;
+}
  
  h3 {
      width: 100%;
@@ -207,9 +212,7 @@ movies
  }
  
  p {
-     width: 100%;
-     padding: 0 24px 0 24px;
-     color: #df2742;
+     color: red;
  }
 
 /*
@@ -248,3 +251,4 @@ footer
   justify-content: center;
   align-items: center;
 }
+
