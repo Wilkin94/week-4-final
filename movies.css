@@ -175,9 +175,42 @@ movies
 
 */
 
-p {
-  color: red;
-}
+.movies__list {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+ }
+ 
+ 
+ .movie {
+     width: 25%;
+ }
+ 
+ .movie-card__container {
+     width: 600px;
+ }
+ 
+ .movie--disappear {
+     visibility: hidden;
+ }
+ 
+ .movie__poster {
+     width: 80%;
+     margin: 24px 24px 0 24px;
+     
+ }
+ 
+ h3 {
+     width: 100%;
+     padding: 0 24px 0 24px;
+ }
+ 
+ p {
+     width: 100%;
+     padding: 0 24px 0 24px;
+     color: #df2742;
+ }
 
 /*
 
