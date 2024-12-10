@@ -10,6 +10,7 @@ async function getMovies() {
   console.log(moviesData);
 }
 
+f
 getMovies();
 
 function movieHTML(movie) {
