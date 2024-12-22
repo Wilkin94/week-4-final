@@ -1,6 +1,6 @@
 // https://www.omdbapi.com/?i=tt3896198&apikey=e5586477&s=movies
 // https://www.omdbapi.com/?i=tt3896198&apikey=e5586477&type
-const movieListEl = document.querySelector(`.movie-list`);
+const movieListEl = document.querySelector(`.movies-list`);
 let title = '';
 
 async function getMovies() {
