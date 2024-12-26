@@ -9,15 +9,25 @@ async function getMovies() {
   movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie)).join("");
 }
 
-
 getMovies();
 
-function showUserMovies(movie) {
-  console.log(movie);
+//my filter function
+function filterMovies(event) {
+  sortMovies(event.target.value) //ONLY JOB IS TO SEND TO SORT FUNCTION
+}
+
+async function sortMovies(filter) {
+  if (filter === "Latest-Movies") {
+      movieData.Search.sort((a, b) => parseInt(b.Year.substring(0, 4)) - parseInt(a.Year.substring(0, 4)));
+  } else if (filter === "Oldest-Movies") {
+      movieData.Search.sort((a, b) => parseInt(a.Year.substring(0, 4)) - parseInt(b.Year.substring(0, 4)));
+  }
+
+  movieListEl.innerHTML = movieData.Search.map((movie) => movieHTML(movie)).join("");
 }
 
 function movieHTML(movie) {
-  return `<div class="movie-card" onclick="showUserMovies(${movie.id})">
+  return `<div class="movie-card">
                   <div class="movie-card__container">
                   <img class="movie__poster" src="${movie.Poster}" alt="">
                     <h3><b>Title:</b> ${movie.Title}</h3>

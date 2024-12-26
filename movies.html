@@ -38,13 +38,12 @@
       <section id="search__row">
         <div class="search__container">
           <input type="text" name="" placeholder="Search Your Movies...">
-          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </section>
 
       <section id="selector__row">
         <div class="selector__container">
-          <select id="filter">
+          <select id="filter" onchange="filterMovies(event)">
             <option value="" disabled selected>Sort</option>
             <option value="Movies"> Oldest Movies</option>
             <option value="Series">Latest Movies</option>
