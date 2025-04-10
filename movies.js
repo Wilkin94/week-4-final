@@ -4,7 +4,7 @@ const movieListEl = document.querySelector(`.movie-list`);
 let title = '';
 
 async function getMovies() {
-  const movies = await fetch("https://www.omdbapi.com/?i=tt3896198&apikey=e5586477&s=movies");
+  const movies = await fetch("https://www.omdbapi.com/?s=fast&apikey=e5586477");
   const moviesData = await movies.json();
   movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie)).join("");
   console.log(moviesData);
@@ -12,12 +12,13 @@ async function getMovies() {
 
 getMovies();
 
-function showMoviePosts(movie) {
-  console.log(movie);
+function onSearchResult(event) {
+  console.log(event.target.value)
 }
 
+
 function movieHTML(movie) {
-  return `<div class="movie-card" onclick="showMoviePosts(movie)">
+  return `<div class="movie-card" onclick="">
                   <div class="movie-card__container">
                   <img class="movie__poster" src="${movie.Poster}" alt="">
                     <p><b>Title:</b> ${movie.Title}</p>
