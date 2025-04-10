@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies4You</title>
+    <script src="https://kit.fontawesome.com/da5b50192e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="movies.css">
+    <script src="movies.js" defer></script>
+</head>
+<body>
+    <section id="landing">
+        <nav>
+          <div class="nav__container">
+            <a href="index.html"
+              ><img
+                class="personal__logo"
+                src="./assets/Screenshot_2024-10-19_220614-removebg-preview.png"
+                alt=""
+            /></a>
+            <ul class="nav__links">
+              <li class="nav__link nav__link--anchor color">
+                <a class="color" href="index.html">Home</a>
+              </li>
+              <li class="nav__link nav__link--anchor color">
+                <a class="color" href="movies.html">Movies</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+
+      <section id="header__row">
+        <div class="header__container">
+          <h2 class="header__title color h2">Browser Your Movies</h2>
+      </section>
+
+      <section id="search__row">
+        <div class="search__container">
+          <input type="text" name="" placeholder="Search Your Movies...">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </section>
+
+      <section id="selector__row">
+        <div class="selector__container">
+          <select id="filter">
+            <option value="" disabled selected>Sort</option>
+            <option value="Movies"> Oldest Movies</option>
+            <option value="Series">Latest Movies</option>
+          </select>
+        </div>
+      </section>
+
+      <section>
+        <div class="movie__container">
+          <div class="movie__row">
+            <div class="movie-list">
+              <div class="movie">
+                <div class="movie-card">
+                  <div class="movie-card__container">
+                    <img class="movie__poster" src="" alt="">
+                    <p class="movie__para"><b>Title:</b> Movie Title</p>
+                    <p class="movie__para"><b>Year:</b> Movie Year</p>
+                    <p class="movie__para"><b>Type:</b> Movie Type</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer>
+        <div class="footer__container">
+          <div class="footer__row">
+            <figure>
+              <a href="index.html">
+              <img
+                class="logo footer__logo"
+                src="./assets/Screenshot_2024-10-19_220614-removebg-preview.png"
+                alt=""
+              /></a>
+            </figure>
+            <div class="social__list">
+              <a class="icon color" href="https://www.facebook.com/wilkin.anthony/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                class="icon color"
+                href="https://www.linkedin.com/in/wilkin-amador-a8b3b7198/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a class="icon color" href="https://github.com/Wilkin94"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                class="icon color"
+                href="./assets/Amador, Wilkin (2).docx"
+                target="_blank"
+                ><i class="fa-solid fa-file-pdf"></i
+              ></a>
+            </div>
+            <div class="footer__copyright">
+              <p>
+                <span class="color footer__para">Copyright</span> &copy;
+                <span class="color footer__para">Wilkin Amador</span>
+                <span class="color footer__para">All Rights Reserved</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
