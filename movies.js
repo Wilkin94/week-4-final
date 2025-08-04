@@ -4,7 +4,7 @@ const movieListEl = document.querySelector(`.movie-list`);
 let title = '';
 
 async function getMovies() {
-  const movies = await fetch("https://www.omdbapi.com/?s=naruto&apikey=e5586477");
+  const movies = await fetch("https://www.omdbapi.com/?s=movies&apikey=e5586477");
   const moviesData = await movies.json();
   movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie)).join("");
   console.log(moviesData);
