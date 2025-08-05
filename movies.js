@@ -1,10 +1,10 @@
 // https://www.omdbapi.com/?i=tt3896198&apikey=e5586477&s=movies
 // https://www.omdbapi.com/?i=tt3896198&apikey=e5586477&type
 const movieListEl = document.querySelector(`.movie-list`);
-let title = '';
+const searchInput = document.getElementById("searchInput");
 
 async function getMovies() {
-  const movies = await fetch("https://www.omdbapi.com/?s=movies&apikey=e5586477");
+  const movies = await fetch("https://www.omdbapi.com/?s=batman&apikey=e5586477");
   const moviesData = await movies.json();
   movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie)).join("");
   console.log(moviesData);

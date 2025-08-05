@@ -37,7 +37,7 @@
 
       <section id="search__row">
         <div class="search__container">
-          <input type="text" name="" placeholder="Search by Name and find the Best..." 
+          <input type="text" id="searchInput" placeholder="Search by Name and find the Best..." 
           onchange="onSearchResult(event)">
         </div>
       </section>
@@ -46,8 +46,8 @@
         <div class="selector__container">
           <select id="filter">
             <option value="" disabled selected>Sort</option>
-            <option value="Movies"> Oldest Movies</option>
-            <option value="Series">Latest Movies</option>
+            <option value="Movies"> Oldest to Newest</option>
+            <option value="Series">Newest to Oldest</option>
           </select>
         </div>
       </section>
