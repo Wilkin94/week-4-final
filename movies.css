@@ -175,7 +175,7 @@ movies
 
 */
 
-.movies__list {
+.movie-list {
   flex-wrap: wrap;
   display: flex;
   width: 100%;
