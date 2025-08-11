@@ -3,10 +3,15 @@
 const movieListEl = document.querySelector(`.movie-list`);
 const searchInput = document.getElementById("searchInput");
 
-async function getMovies() {
-  const movies = await fetch("https://www.omdbapi.com/?s=batman&apikey=e5586477");
+function onSearchResult(event) {
+  getMovies(event.target.value);
+}
+
+async function getMovies(searchTerm) {
+  console.log("this is a searchTerm", searchTerm)
+  const movies = await fetch("https://www.omdbapi.com/?s=${searchTerm}&apikey=e5586477");
   const moviesData = await movies.json();
-  movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie) => {
+  movieListEl.innerHTML = moviesData.Search.map((movie) => {
     return `
     <div class="movie-card" onclick="">
     <div class="movie-card__container">
@@ -16,16 +21,12 @@ async function getMovies() {
     <p><b>Type:</b> ${movie.Type}</p>
     </div>
      </div>
-     `;
-    
+     `;  
+     
   }).join("");
 }
 
-getMovies();
 
-function onSearchResult(event) {
-  console.log(event.target.value);
-}
 
 
   
