@@ -8,7 +8,6 @@ function onSearchResult(event) {
 }
 
 async function getMovies(searchTerm) {
-  console.log("this is a searchTerm", searchTerm)
   const movies = await fetch("https://www.omdbapi.com/?s=${searchTerm}&apikey=e5586477");
   const moviesData = await movies.json();
   movieListEl.innerHTML = moviesData.Search.map((movie) => {
