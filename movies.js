@@ -30,13 +30,13 @@ movieListEl.innerHTML = movieList
 .slice(0, 6)
 .map((movie) => {
     return `
-    <div class="movie-card">
-    <div class="movie-card__container">
-    <img class="movie__poster" src="${movie.Poster}" alt="">
-    <p><b>Title:</b> ${movie.Title}</p>
-    <p><b>Year:</b> ${movie.Year}</p>
-    <p><b>Type:</b> ${movie.Type}</p>
-    </div>
+     <div class="movie-card">
+     <div class="movie-card__container">
+     <img class="movie__poster" src="${movie.Poster}" alt="">
+     <p><b>Title:</b> ${movie.Title}</p>
+     <p><b>Year:</b> ${movie.Year}</p>
+     <p><b>Type:</b> ${movie.Type}</p>
+     </div>
      </div>
      `;   
   }).join("");
