@@ -32,7 +32,7 @@
 
       <section id="header__row">
         <div class="header__container">
-          <h2 class="header__title color h2">Browser Your Movies</h2>
+          <h2 class="header__title color h2">Browse Your Movies</h2>
       </section>
 
       <section id="search__row">
@@ -44,10 +44,10 @@
 
       <section id="selector__row">
         <div class="selector__container">
-          <select id="filter">
-            <option value="" disabled selected>Sort</option>
-            <option value="Movies"> Oldest to Newest</option>
-            <option value="Series">Newest to Oldest</option>
+          <select name="movieSort" id="movieSort" onchange="sortChange(event)">
+            <option value="" disabled selected value="">Sort by Year</option>
+            <option value="oldest">Newest to Oldest</option>
+            <option value="newest">Oldest to Newest</option>
           </select>
         </div>
       </section>
